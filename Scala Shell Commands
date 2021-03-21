@@ -1,0 +1,6 @@
+// Using shell interpreter you need to remove the package defintion of IDE
+// scalac <Mylife>.scala
+// scala <Mylife>
+// scala
+// :help
+// :quit
