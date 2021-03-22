@@ -1,0 +1,13 @@
+// Each action creates a job
+// Each transformation with shuffle creates a stage => break the DAG
+// Each operation / partition creates a task. i.e. business logic
+// Task is a minimum unit of execution: scheduling, resource allocation, monitoring and failure recovery.
+// COALESCE doesn't have shuffle and doesn't create a stage;
+// REPARTITION have shuffle;
+
+// Tuning is necesary to reduce number of thansformations with shuffle and partition;
+// To tuning, remove every debugging code. i.e. show(), println();
+// In collectasList(
+
+// Spark cluster has executors and master (with context and driver)
+// When you put "collectAsList", all the data goes from executors to driver. The driver crashes in 1TB of data.
